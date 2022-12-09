@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="icon" href="./images/calculator.png" type="image/icon type">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="refresh()">
+
+    <div class="container">
+        <div class="sub-container-1">
+            <div class="budget-body">
+                <h1>Budget</h1>
+                <input type="number" placeholder="Enter Total Amount" id="budgetAmount">
+                <button type="submit" class="hvr-fade"  onclick="set_budget()">Add Budget</button>
+            </div>
+            <div class="expenses-body">
+                <h1>Expenses</h1>
+                <input type="text" placeholder="Enter Title of Expense" id="expenseName">
+                <input type="number"  placeholder="Enter Cost of Product" id="expenseCost">
+                <button type="submit" class="hvr-fade" onclick="add_exp()" id="addExp">Add Expense</button>
+            </div>
+        </div>
+        <div class="sub-container-2">
+            <div class="expenses-list-body">
+                <div class="expenses-list-header">
+                    <div class="div">
+                        <p>Total budget</p>
+                        <span id="totalBudget">0</span>
+                    </div>
+                    <div class="div">
+                        <p>Expenses</p>
+                        <span id="totalExpense">0</span>
+                    </div>
+                    <div class="div">
+                        <p>Balance</p>
+                        <span id="totalBalance">0</span>
+                    </div>
+                </div>
+                <div class="expenses-list">
+                    <h3>Expense List</h3>
+                    <div>
+                        <button class="delete-btn" onclick="remove()"><img class="hvr-bounce-in" src="./images/icons8-broom-40.png"
+                                alt=""></button>
+                    </div>
+                    <div id="list-container">
+                        <table style="width: 100%; text-align: center;" id="tbody">
+                        
+                          </table> 
+
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./script.js"></script>
+</html>
